@@ -1,6 +1,7 @@
-import react,{useState} from 'react'
+import {useState} from 'react'
 import css from  './index.scss' 
-import logo from './LogoPalomaOpt.svg'
+
+import Navigation from './layout/Navigation'
 
 
 const App=()=>{
@@ -9,7 +10,8 @@ const App=()=>{
         setName(e.target.value);
     }
     return <div>
-        <h1><img src={logo} width="75" alt= "SportFly Logo"></img>Un server de desarrollo </h1>
+        <Navigation></Navigation>
+        
         <label htmlFor="name">Nombre:</label>
         <label> Este es otra  prueba  <label htmlFor=""></label></label>
         <input 
