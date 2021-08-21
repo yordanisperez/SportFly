@@ -9,18 +9,20 @@
     z-index:  20;
     left: 0;
     right: 0;
-    margin: 5% auto;
+    margin:  auto;
   }
 
   
 .login-btn{
+    justify-content: center;
     font: inherit;
+    width: 15rem;
     padding: 0.5rem 1.5rem;
     cursor:pointer;
     border-radius: 2.5rem;
-    background-color: #800040;
-    color: white;
-    border: 1px solid #800040;
+    background-color: #8176ffff; 
+    color: #800040;
+    border: 1px solid rgb(67, 59, 150);
     margin: 1rem auto 0px auto;
     display:flex;
  }
@@ -29,4 +31,10 @@
 .login-btn--alt{
     background-color:transparent;
     color: #800040;
+  }
+
+  @media (max-width: 350px ) {
+    .login {
+       width: auto; 
+    }
   }

@@ -4,6 +4,8 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
 const {  merge } = require('webpack-merge');
 const common = require('./webpack.common');
 
+const Dotenv = require('dotenv-webpack');
+
 
 const development_config={
     devtool: 'eval-source-map',//eval or eval-source-map or source-map recomendado para production
@@ -17,6 +19,7 @@ const development_config={
     target:"web",
     plugins:[new HotModuleReplacementPlugin(),
         new ReactRefreshWebpackPlugin(),
+        new Dotenv(),
     ],
 }
 module.exports =merge(common,development_config);

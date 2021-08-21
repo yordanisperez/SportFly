@@ -21,4 +21,25 @@ body{
         margin-top:2rem 
     }
 
+    .navigation-link:hover , .navigation-logo:hover ,.login-btn:hover{
+        visibility:visible;
+        animation-name: react-border;
+        animation-duration: 0.15s;
+        animation-fill-mode: forwards;
+    
+      }
+      @keyframes react-border {
+        0%{
+          border: 1.2px solid #ced4da; 
+        
+  
+        }
+        100%{
+          border: 2px solid #949FB8; 
+           
+        }
+        
+    }
+
+
 }

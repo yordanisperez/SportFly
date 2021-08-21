@@ -7,6 +7,10 @@
     #header{
         display: flex;
         background-color:rgb(102, 89, 77);
+        .header-user-img{
+          border-radius: 50%;
+          margin-top: 0.5rem;
+        }
     }
 
     .navigation-nav{
@@ -38,6 +42,7 @@
     color:white;
     }
 
+
     @media (max-width: 740px ) {
         .navigation-ul {
           flex-direction: column;
@@ -53,22 +58,4 @@
           align-items: center;
         }
       }
-      .navigation-link:hover , .navigation-logo:hover{
-        visibility:visible;
-        animation-name: react-border;
-        animation-duration: 0.15s;
-        animation-fill-mode: forwards;
-    
-      }
-      @keyframes react-border {
-        0%{
-          border: 1.2px solid #ced4da; 
-        
-  
-        }
-        100%{
-          border: 2px solid #949FB8; 
-           
-        }
-        
-    }
+     
