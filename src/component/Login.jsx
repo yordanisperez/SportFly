@@ -3,6 +3,8 @@ import Backdrop from './Backdrop';
 import {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import {useAuth0} from '@auth0/auth0-react'
+import {Button} from '@material-ui/core';
+import {Build} from '@material-ui/icons';
 
 
 function Login(props){
@@ -26,7 +28,7 @@ function Login(props){
             <img className='login-logo' src={props.logo} width="75" alt="SportFly Logo"></img>
             <h3>{props.title}</h3>
 
-            <button className='login-btn'  onClick={handleLoginLocal}>Usar Estrategia Local (no recomendado)</button>
+            <button className='login-btn'  onClick={handleLoginLocal}> <Build/>Estrategia Local</button>
             <button className='login-btn'  onClick={handleLoginLocal}>Autentificarse usando 0Auth2</button>
             <button className='login-btn login-btn--alt' onClick={handleCancelAuth} >Cancel</button>
             

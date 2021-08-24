@@ -1,14 +1,19 @@
+@import 'var';
+
+
 *{
+    font-family: Rubik,sans-serif;
     margin: 0px;
+    box-sizing:border-box;
 }
 
 body{
-    background-color: rgb(194, 144, 144);
+    background-color:$color-primary;
 
    
     background: url("./img.jpg") no-repeat;
     label{
-        color: aquamarine;
+        color:$color-secondary;
         font-size: 20px;
         background-color: rgb(172, 151, 151);
       

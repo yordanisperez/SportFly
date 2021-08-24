@@ -51,9 +51,51 @@ module.exports ={
           },
           {
               test:/\.(js|jsx)$/,
-              use:'babel-loader',
-             // include: path.resolve(__dirname, '../src'),
-              exclude:/node_modules/, //path.resolve(__dirname, '../node_modules'),
+              use:{
+              loader:'babel-loader',
+              options: {
+                presets: ['@babel/preset-env'],
+                plugins: [
+                   /* [
+                      'babel-plugin-import',
+                      {
+                        'libraryName': '@material-ui/core',
+                        // Use "'libraryDirectory': ''," if your bundler does not support ES modules
+                        'libraryDirectory': '',
+                        'camel2DashComponentName': false
+                      },
+                      'core'
+                    ],
+                    [
+                      'babel-plugin-import',
+                      {
+                        'libraryName': '@material-ui/icons',
+                        // Use "'libraryDirectory': ''," if your bundler does not support ES modules
+                        'libraryDirectory': '',
+                        'camel2DashComponentName': false
+                      },
+                      'icons'
+                    ],*/
+                   
+                    [
+                        'babel-plugin-transform-imports',
+                        {
+                          '@material-ui/core': {
+                            // Use "transform: '@material-ui/core/${member}'," if your bundler does not support ES modules
+                            'transform': '@material-ui/core/${member}',
+                            'preventFullImport': true
+                          },
+                          '@material-ui/icons': {
+                            // Use "transform: '@material-ui/icons/${member}'," if your bundler does not support ES modules
+                            'transform': '@material-ui/icons/${member}',
+                            'preventFullImport': true
+                          }
+                        }
+                      ]
+                  ]
+              }
+            } ,            
+              exclude:/node_modules/, 
 
               
           },

@@ -1,15 +1,17 @@
+@import '../var';
     h1{
        
-        color: aquamarine;
+        color: $color-secondary;
         margin: auto;
         text-justify: distribute-all-lines;
     }
     #header{
         display: flex;
-        background-color:rgb(102, 89, 77);
+        background-color:$color-primary;
         .header-user-img{
           border-radius: 50%;
-          margin-top: 0.5rem;
+          margin-top: 1.5rem;
+          width: 65px;
         }
     }
 
