@@ -18,8 +18,16 @@ module.exports ={
             main: 
             {
                 import: './src/index.js',
-             
-            }
+                dependOn:['vendor_react','vendor_auth0'],
+            },
+            vendor_react:
+            {
+                import:'./src/depend-react.js',
+              
+            },
+            vendor_auth0:{
+              import:"./src/depend-auth0.js",
+            },
         },
     output:{
         path:path.resolve(__dirname,'../build'),

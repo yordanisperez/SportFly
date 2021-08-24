@@ -5,12 +5,14 @@ const common = require('./webpack.common')
 
 
 const prod_config={
-    devtool: 'source-map',//eval or eval-source-map or source-map recomendado para production
+    //devtool: 'source-map',//eval or eval-source-map or source-map recomendado para production
     mode: 'production', //production or development
     optimization:{
         splitChunks:{
             chunks:"all",
         },
+        runtimeChunk: 'single',
     },
+ 
 }
 module.exports =merge(common,prod_config);

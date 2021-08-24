@@ -7,7 +7,11 @@ import css from './navigation.scss'
 
 function Navigation(){
     const seccionCtx=useContext(SeccionContext);
-    const { isAuthenticated ,logout,user} = useAuth0();
+    const { isAuthenticated ,logout,user , getAccessTokenSilently} = useAuth0();
+    
+
+
+
 
     function handleLogout(){
         logout();
