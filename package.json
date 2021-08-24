@@ -2,8 +2,11 @@
   "name": "webpack-react-webpack",
   "version": "1.0.0",
   "description": "Un proyecto optimizado para desarrollo y producción con react y webpack",
+  "homepage":"http://yordanisperez.github.io/AuthentificationWithReact",
   "main": "index.js",
   "scripts": {
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "build": "webpack --config config/webpack.production.js",
     "start": "webpack serve --config config/webpack.develop.js"
   },
@@ -24,6 +27,7 @@
     "clean-webpack-plugin": "*",
     "css-loader": "^6.2.0",
     "dotenv-webpack": "^7.0.3",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.2.0",
     "node-sass": "^6.0.1",
