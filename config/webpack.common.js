@@ -18,21 +18,29 @@ module.exports ={
             main: 
             {
                 import: './src/index.js',
-                dependOn:['vendor_react','vendor_auth0'],
+             //   filename: '../build/[name].[contenthash].js',
+                dependOn:['vendor_react','vendor_auth0','vendor_materialui'],
             },
-            vendor_react:
-            {
-                import:'./src/depend-react.js',
-              
-            },
+            vendor_react:{
+              import:['react', 'react-dom','react-router-dom'],
+            //  filename:'../build/[name].js',
+          }
+          
+          ,
             vendor_auth0:{
-              import:"./src/depend-auth0.js",
+              import:['@auth0/auth0-react'],
+               // filename:'../build/[name].js'
             },
+            
+             vendor_materialui:{
+              import:['@material-ui/core','@material-ui/icons'],
+            }
         },
-    output:{
+
+   output:{
         path:path.resolve(__dirname,'../build'),
-        filename: '[name].[contenthash].js',
-        publicPath:""
+        filename: '[name][contenthash].js',
+        publicPath:"",
     },
     module: {
         rules: [

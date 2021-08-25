@@ -1,7 +1,8 @@
-import {useState,useEffect} from 'react'
+import {useState,useEffect,Fragment} from 'react'
 import css from  './index.scss' 
 import {Route,Switch} from 'react-router-dom';
-import Navigation from './layout/Navigation'
+
+import Layout from './layout/Layout'
 import Login from './component/Login'
 import logo from './LogoPalomaOpt.svg'
 import { useAuth0 } from "@auth0/auth0-react";
@@ -14,10 +15,8 @@ const audience=process.env.REACT_APP_AUTH0_AUDIENCE
 
 
 
-
 const App=()=>{
-    const [name,setName]=useState('');
-    const { isLoading,user, getAccessTokenSilently} = useAuth0();
+    const { isLoading,user, getAccessTokenSilently,isAuthenticated} = useAuth0();
     const [userMetadata, setUserMetadata] = useState(null);
 
 //dev-csgmhfrr.us.auth0.com
@@ -54,48 +53,50 @@ const App=()=>{
 
 
 
-    function handleOnchange(e){
-        setName(e.target.value);
-    }
    
     if (isLoading) {
-        return <div> 
+        return <div className="welcome-section"> 
                 <Backdrop>
 
                 </Backdrop>
-            Loading ...</div>;
+            Loading ...
+            </div>;
       }
 
-    return <div>
-        <Navigation></Navigation>
-        <Switch>
-            <Route path='/' exact>
-                    <label htmlFor="name">Nombre:</label>
-                <label> Este es otra  prueba  <label htmlFor=""></label></label>
-                <input 
-                    id="name" 
-                    type="text" 
-                    value={name} 
-                    onChange={handleOnchange}
-                    />  
-                <div>
-                    {JSON.stringify(user)}
+    return (
+      <fragment>
+        <Layout>
+          <Switch>
+            <Route path="/" exact>
+              <div className="welcome-section">
+                {isAuthenticated && (
+                  <div>
+                    <p>{JSON.stringify(user).replace(/,/gi, ", ")}</p>
                     <h3>User Metadata</h3>
-                        {userMetadata ? (
-                        <pre>{JSON.stringify(userMetadata, null, 2)}</pre>
-                        ) : (
-                        "No user metadata defined"
-                        )}                         
-                </div>            
-            </Route>  
-            <Route path='/login' >
-                <Login title= {'Su formulario de autentificarse personalizado'} logo={logo}></Login>
-            </Route>    
-         
-        </Switch>
-
-
-    </div>
+                    {userMetadata ? (
+                      <pre>
+                        {JSON.stringify(userMetadata, null, 2).replace(
+                          /,/gi,
+                          ", "
+                        )}
+                      </pre>
+                    ) : (
+                      "No user metadata defined"
+                    )}
+                  </div>
+                )}
+              </div>
+            </Route>
+            <Route path="/login">
+              <Login
+                title={"Inicie sección con sus pérfiles de redes sociales"}
+                logo={logo}
+              ></Login>
+            </Route>
+          </Switch>
+        </Layout>
+      </fragment>
+    );
 }
 
 export default App;

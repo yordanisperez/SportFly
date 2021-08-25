@@ -8,11 +8,21 @@
     #header{
         display: flex;
         background-color:$color-primary;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        z-index: +1;    
+        width: 100%;
         .header-user-img{
           border-radius: 50%;
           margin-top: 1.5rem;
           width: 65px;
+
         }
+        border-bottom-left-radius: $border-radios;
+        border-bottom-right-radius:$border-radios;
+        border-bottom:$border-styles;
+        box-shadow:$box-shadow-frontal
     }
 
     .navigation-nav{
@@ -45,7 +55,7 @@
     }
 
 
-    @media (max-width: 740px ) {
+   @media (max-width: 740px ) {
         .navigation-ul {
           flex-direction: column;
         }
@@ -54,7 +64,7 @@
         }
       }
 
-      @media (max-width: 480px ) {
+      @media (max-width: 580px ) {
         #header {
           flex-direction: column;
           align-items: center;

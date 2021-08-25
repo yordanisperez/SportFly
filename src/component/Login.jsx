@@ -22,15 +22,15 @@ function Login(props){
         history.replace('/');    
      }
      
-     return (<div>
+     return (<div className='welcome-section'>
          {modalIsOpen&& <Backdrop onCancel={handleCancelAuth}/>}
         <div className ='login'>
             <img className='login-logo' src={props.logo} width="75" alt="SportFly Logo"></img>
             <h3>{props.title}</h3>
 
-            <button className='login-btn'  onClick={handleLoginLocal}> <Build/>Estrategia Local</button>
-            <button className='login-btn'  onClick={handleLoginLocal}>Autentificarse usando 0Auth2</button>
-            <button className='login-btn login-btn--alt' onClick={handleCancelAuth} >Cancel</button>
+            
+            <button className='login-btn'  onClick={handleLoginLocal}>Iniciar sección con 0Auth2.0</button>
+            <button className='login-btn login-btn--alt' onClick={handleCancelAuth} >Cancelar</button>
             
         </div>
      </div>);

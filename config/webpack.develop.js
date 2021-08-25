@@ -21,5 +21,8 @@ const development_config={
         new ReactRefreshWebpackPlugin(),
         new Dotenv(),
     ],
+    optimization:{
+        runtimeChunk: 'single',
+    },
 }
 module.exports =merge(common,development_config);

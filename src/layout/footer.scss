@@ -1,0 +1,101 @@
+@import '../var';
+    #Contacto{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: $color-primary;
+        border-top: $border-styles ;
+        border-top-left-radius: $border-radios;
+        border-top-right-radius: $border-radios;
+        box-shadow:  $box-shadow-frontal;
+        margin: 0rem auto 0rem auto ;
+
+        width: 100%;
+        .nav-link{
+            display:flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: $color-secondary;
+            height: 4rem;
+            justify-content: center;
+    
+            
+        }
+
+        ul{
+            display: flex;
+            padding: 0rem 2rem 0rem 0rem;
+            margin: 0rem;
+           
+            height: 100%;
+        }
+        li{
+            color: $color-secondary;
+            padding: 0rem 1rem 0rem 1rem ;
+            list-style: none;
+        }
+        i{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        span{
+            margin: 0rem 3rem 1rem 0rem;  
+        }
+
+        i:hover{
+            visibility:visible;
+            animation-name: react-border;
+            animation-duration: 0.15s;
+            animation-fill-mode: forwards;           
+        }
+    }
+
+
+    @keyframes react-border {
+        0%{
+          border: 1.2px solid #ced4da; 
+        
+  
+        }
+        100%{
+          border: 2px solid #949FB8; 
+           
+        }
+        
+    }
+
+    @media (max-width: 460px ) {
+        body{
+            padding-top: 20rem;
+           }
+        
+    }
+      
+  
+    @media (max-width: 460px) 
+    {
+        #Contacto
+        {
+            justify-content: center;
+            ul{
+                display: flex;
+                flex-direction: column;
+                padding-right: 0rem;
+               
+                margin:0rem auto 0rem auto;
+                li{
+                    margin:0rem auto 0rem auto;
+                    a{
+                        height: 2rem;
+                        
+                    }
+                }
+            }
+            span{
+                margin: 0rem auto 1rem auto;
+            }
+        }
+ 
+     }
+    
