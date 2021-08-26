@@ -3,8 +3,8 @@ const {HotModuleReplacementPlugin} = require('webpack');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const {  merge } = require('webpack-merge');
 const common = require('./webpack.common');
-
 const Dotenv = require('dotenv-webpack');
+
 
 
 const development_config={
@@ -19,7 +19,7 @@ const development_config={
     target:"web",
     plugins:[new HotModuleReplacementPlugin(),
         new ReactRefreshWebpackPlugin(),
-        new Dotenv(),
+        new Dotenv({ignoreStub:false, path:'./developed.env'}),
     ],
     optimization:{
         runtimeChunk: 'single',

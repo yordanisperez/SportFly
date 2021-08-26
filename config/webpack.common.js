@@ -130,7 +130,8 @@ module.exports ={
     new miniCssExtractPlugin({
         filename:'bundle.css',
     }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+
 
     ],
     resolve:{

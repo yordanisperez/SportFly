@@ -9,7 +9,7 @@ import {SeccionContextProvider} from './store/seccion-context'
 
 const domain=process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId=process.env.REACT_APP_AUTH0_CLIENT_ID;
-const audience=process.env.REACT_APP_AUTH0_AUDIENCE
+//const audience=process.env.REACT_APP_AUTH0_AUDIENCE
 
 render(
     <SeccionContextProvider>

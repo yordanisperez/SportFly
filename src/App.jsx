@@ -64,7 +64,7 @@ const App=()=>{
       }
 
     return (
-      <fragment>
+      <Fragment>
         <Layout>
           <Switch>
             <Route path="/" exact>
@@ -95,7 +95,7 @@ const App=()=>{
             </Route>
           </Switch>
         </Layout>
-      </fragment>
+      </Fragment>
     );
 }
 
