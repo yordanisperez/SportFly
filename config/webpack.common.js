@@ -41,6 +41,7 @@ module.exports ={
         path:path.resolve(__dirname,'../build'),
         filename: '[name][contenthash].js',
         publicPath:"",
+        clean: true,
     },
     module: {
         rules: [
