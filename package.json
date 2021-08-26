@@ -2,7 +2,7 @@
   "name": "webpack-react-webpack",
   "version": "1.0.0",
   "description": "Un proyecto optimizado para desarrollo y producción con react y webpack",
-  "homepage":"http://yordanisperez.github.io/SportFly",
+  "homepage":"https://yordanisperez.github.io/SportFly",
   "main": "index.js",
   "scripts": {
     "predeploy":"npm run build",
