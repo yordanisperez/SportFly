@@ -29,9 +29,9 @@ const App=()=>{
               audience:`https://${domain}/api/v2/`,
               scope: "read:current_user",
             });
-            console.log("Token de Access: ",accessToken);
+          //  console.log("Token de Access: ",accessToken);
             const userDetailsByIdUrl = `https://${domain}/api/v2/users/${user.sub}`;
-            console.log(userDetailsByIdUrl);
+         //   console.log(userDetailsByIdUrl);
             const metadataResponse = await fetch(userDetailsByIdUrl, {
               headers: {
                 Authorization: `Bearer ${accessToken}`,
