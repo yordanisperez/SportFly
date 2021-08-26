@@ -13,7 +13,7 @@ import Infouser from './component/Infouser'
 
 
 const App=()=>{
-    const { isLoading} = useAuth0();
+    const { isLoading,isAuthenticated} = useAuth0();
  
     if (isLoading) {
         return <div className="welcome-section"> 
@@ -29,9 +29,9 @@ const App=()=>{
         <Layout>
           <Switch>
             <Route path="/" exact>
-              <Infouser>
+             { isAuthenticated&&!isLoading&&<Infouser/>}
  
-              </Infouser>
+            
             </Route>
             <Route path="/login">
               <Login
