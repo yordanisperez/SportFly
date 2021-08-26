@@ -5,7 +5,7 @@
   "homepage":"https://yordanisperez.github.io/SportFly",
   "main": "index.js",
   "scripts": {
-    "predeploy":"npm run build",
+    "predeploy":"npm run build && echo  'nodechallenge.xyz' > /build/CNAME " ,
     "deploy":"gh-pages -d build",
     "build": "webpack --config config/webpack.production.js",
     "start": "webpack serve --config config/webpack.develop.js"
