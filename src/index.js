@@ -9,11 +9,12 @@ import {SeccionContextProvider} from './store/seccion-context'
 
 const domain=process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId=process.env.REACT_APP_AUTH0_CLIENT_ID;
+const redirectUri=process.env.REACT_APP_AUTH0_REDIREC_URI;
 //const audience=process.env.REACT_APP_AUTH0_AUDIENCE
 
 render(
     <SeccionContextProvider>
-        <Auth0Provider domain={domain} clientId={clientId} redirectUri={window.location.origin  }
+        <Auth0Provider domain={domain} clientId={clientId} redirectUri={redirectUri  }
                 audience={`https://${domain}/api/v2/`}
                 scope="read:current_user update:current_user_metadata"
                 >
