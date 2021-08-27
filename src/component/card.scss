@@ -1,0 +1,22 @@
+@import '../var';
+
+.card{
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    border: solid 1px  gray;
+    margin-top: 2rem;
+    h1,h2,h3,h4,h5{
+        padding-bottom: 0.25rem;
+    }
+    background-color:$color-secondary;
+    color: $color-accent;
+    z-index: 5;
+    padding:1rem;
+    height: min-content;
+   // min-height: min-content;
+   // max-height: min-content;
+  // min-width: 20rem;
+  // max-width: 25rem;
+    
+
+}

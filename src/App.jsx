@@ -8,6 +8,7 @@ import logo from './LogoPalomaOpt.svg'
 import { useAuth0 } from "@auth0/auth0-react";
 import Backdrop from './component/Backdrop';
 import Infouser from './component/Infouser'
+import Generales from './component/Generales';
 
 
 
@@ -29,6 +30,7 @@ const App=()=>{
         <Layout>
           <Switch>
             <Route path="/" exact>
+              <Generales/>
              { isAuthenticated&&!isLoading&&<Infouser/>}
  
             
