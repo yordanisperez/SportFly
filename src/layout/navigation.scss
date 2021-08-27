@@ -3,7 +3,7 @@
        
         color: $color-secondary;
         margin: auto;
-        text-justify: distribute-all-lines;
+        text-align: center;
     }
     #header{
         display: flex;
@@ -46,11 +46,14 @@
     }
 
     .navigation-link{
-    text-decoration: none;
+    text-decoration: solid;
     color: black;
     height: 2rem;
     margin: 0rem 2rem 0rem 0rem;    
     font-size: x-large;
+    font-weight: bold;
+    border:$border-styles;
+    box-shadow: $box-shadow-frontal;
     color:white;
     }
 
@@ -59,15 +62,25 @@
         .navigation-ul {
           flex-direction: column;
         }
-        h1{
-            margin-left: 3rem;
-        }
+
       }
 
       @media (max-width: 580px ) {
         #header {
           flex-direction: column;
           align-items: center;
+          .navigation-link{
+            margin: 1rem auto 5rem auto;
+          }
+          .navigation-nav{
+            margin:15px auto 20px auto ;
+          }
+          .header-user-img{
+            margin: 1rem auto 1rem auto;
+          }
+          .navigation-ul{
+            padding-left: 0px;
+          }
         }
       }
      
