@@ -67,6 +67,7 @@
 
       @media (max-width: 580px ) {
         #header {
+          position: relative;
           flex-direction: column;
           align-items: center;
           .navigation-link{
