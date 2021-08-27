@@ -41,12 +41,12 @@ function Infouser(props){
         getUserMetadata();
       }, [getAccessTokenSilently, user?.sub]);
 
-
+// <p>{JSON.stringify(user).replace(/,/gi, ", ")}</p>
 
         return    <div className="welcome-section">
                     {isAuthenticated && (
                     <div>
-                        <p>{JSON.stringify(user).replace(/,/gi, ", ")}</p>
+                       
                         <h3>User Metadata</h3>
                         {userMetadata ? (
                         <pre>
