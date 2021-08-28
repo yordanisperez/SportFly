@@ -1,0 +1,55 @@
+@import '../var';
+
+.conten-hint{
+    position: fixed;
+    left: 0px;
+    top:0px;
+    z-index: 120; 
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hint{
+
+    display:flex;
+    justify-content: flex-start;
+    z-index: 120; 
+    background-color:$color-secondary;
+    width: 100%;
+    padding:1rem;
+    border:$border-radios;
+    border:$border-styles;
+    box-shadow: $box-shadow-frontal;
+   // height: 10px;
+    color:$color-accent;
+    .hint-closed{
+        margin-left: auto;
+       
+        z-index: 120; 
+        float: right;
+        color:$color-primary;
+        cursor: pointer;
+        
+    }
+}
+
+.hint-closed:hover{
+    visibility:visible;
+    animation-name: react-border;
+    animation-duration: 0.15s;
+    animation-fill-mode: forwards;
+
+  }
+  @keyframes react-border {
+    0%{
+      border: 1.2px solid #ced4da; 
+    
+
+    }
+    100%{
+      border: 2px solid #949FB8; 
+       
+    }
+    
+}

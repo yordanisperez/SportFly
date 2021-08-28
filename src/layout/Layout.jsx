@@ -1,6 +1,7 @@
 import Navigation from './Navigation';
 import Footer from './Footer';
 import clases from './layout.scss';
+import Hint from '../component/Hint'
 
 function Layout(props){
     return (
@@ -8,6 +9,7 @@ function Layout(props){
         <Navigation>
 
         </Navigation>
+        <Hint/>
         <div className="main">
             {props.children}
         </div>
