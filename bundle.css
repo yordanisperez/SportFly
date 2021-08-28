@@ -6,6 +6,8 @@ h1{color:#e9e9e9;margin:auto;text-align:center}#header{display:flex;background-c
 
 .main{display:flex;flex-direction:column;width:100%;max-width:100%;align-items:stretch;margin:auto}
 
+.conten-hint{position:fixed;left:0px;top:0px;z-index:120;display:flex;flex-direction:column;width:100%}.hint{display:flex;justify-content:flex-start;z-index:120;background-color:#e9e9e9;width:100%;padding:1rem;border:.25rem;border:solid 1.5px #e9e9e9;box-shadow:0px 0px 3px 0px rgba(0,0,0,0.2);color:#666}.hint .hint-closed{margin-left:auto;z-index:120;float:right;color:#33379b;cursor:pointer}.hint-closed:hover{visibility:visible;animation-name:react-border;animation-duration:0.15s;animation-fill-mode:forwards}@keyframes react-border{0%{border:1.2px solid #ced4da}100%{border:2px solid #949FB8}}
+
 .login{box-shadow:0px 0px 3px 0px rgba(0,0,0,0.2);border-radius:6px;background-color:#e9e9e9;padding:1rem;text-align:center;width:20rem;position:fixed;z-index:20;left:auto;top:7rem;margin:0px auto 0px auto}.login h3{color:#666}.login-btn{justify-content:center;font:inherit;width:15rem;padding:0.5rem 1.5rem;cursor:pointer;border-radius:2.5rem;font-family:arial,verdana,sans-serif;font-size:small;font-weight:bold;font-style:italic;color:#e9e9e9;border:solid 1.5px #e9e9e9;margin:1rem auto 0px auto;display:flex;background-color:#0059d6ff}.login-btn--alt{color:#e9e9e9;border:solid 1.5px #e9e9e9}@media (max-width: 350px){.login{width:auto}}
 
 .backdrop{position:fixed;z-index:1;background-color:rgba(0,0,0,0.75);width:100%;height:100vh;top:0;left:0}
