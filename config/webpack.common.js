@@ -127,7 +127,7 @@ module.exports ={
       },
     plugins:[new htmlWebpackPlugin({
         template:'./src/index.html',
-        favicon: './src/favicon.ico'
+        favicon: './src/LogoPalomaOpt.svg'
     }),
     new miniCssExtractPlugin({
         filename:'bundle.css',
