@@ -118,7 +118,7 @@ module.exports ={
           },
           {
               type:"asset",
-              test:/\.(png|svg|jpg|jpeg|gif)$/i,
+              test:/\.(png|svg|jpg|jpeg|gif|ico)$/i,
              // include: path.resolve(__dirname, '../src'),
               exclude:/node_modules/, //path.resolve(__dirname, '../node_modules'),
           }
