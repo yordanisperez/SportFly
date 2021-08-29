@@ -8,7 +8,7 @@ const Dotenv = require('dotenv-webpack');
 
 
 const development_config={
-    devtool: 'eval-source-map',//eval or eval-source-map or source-map recomendado para production
+   // devtool: 'eval-source-map',//eval or eval-source-map or source-map recomendado para production
     devServer:{
         port:3000,
         contentBase: "../build",
